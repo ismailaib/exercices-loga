@@ -93,3 +93,40 @@ Debut
     Ecrire("Le nombre des valeurs posetives est : ", nmbrpos
     et "Le nombre des valeurs posetives est : " , nmbrneg")
 Fin
+
+
+
+
+/////////////EXERCICE 4/////////////////////
+Ecrivez un algorithme constituant un tableau , à partir de
+deux tableaux de méme longueur . Le nouveau tableau sera
+la somme des éléments des deux tableaux de départ .
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme PGVTableau
+Variables
+    T1, T2 ,T : Tableau[100] de Réel
+    n, i : Entier
+Debut
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T")
+    pour i <-- 1 jusquA n faire
+       Lire(T[i])
+    finpour
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T2")
+    pour i <-- 1 jusquA n faire
+       Lire(T2[i])
+    finpour 
+    Ecrire ( " Les valeurs de T sont " )
+    pour T[i] <-- T1[i] + T2[i] jusquA n faire
+       Lire(T[i])
+    finpour 
+    
+Fin
