@@ -1,0 +1,20 @@
+Algorithme ResolutionEquatioN2èmeDegré
+a , b , c : Entier
+delta : Entier
+x1 , x2 : Réel
+Debut 
+  Ecrire("Donner les coefficients a, b, c :")
+  Lire(a, b, c)
+  delta <-- a*x*x+b*x+c=0
+  SI delta < 0 :
+      Ecrire ("Aucun solution")
+  SINONSI delta = 0 :
+      x1 = -b/2a  
+      Ecrire ("X1 = , x1")
+  SINON delta > 0 :
+      x1 <-- (-b+sqrt(delta))/2*a
+      x2 <-- (b+sqrt(delta))/2*a
+      Ecrire ("X1 = , x1")
+      Ecrire ("X2 = , x2")
+
+Fin

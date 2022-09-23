@@ -1,0 +1,145 @@
+/////////////EXERCICE 1/////////////////////
+Écrire un algorithme qui calcule la moyenne de deux
+entiers entrés par l'utilisateur .
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+
+Algorithme MoyenneDeuxEntier
+
+Variable
+   a,b : Entier
+   Moyenne : Réel
+
+Debut 
+    Ecrire ("Entrer a :")
+    Lire(a)
+    Ecrire ("Entrer b :")
+    Lire(b)
+    moyenne <-- (a + b ) / 2
+    Ecrire("La moyenne est ",moyenne)
+ 
+Fin
+
+
+
+/////////////EXERCICE 2/////////////////////
+Écrire un algorithme permettant de permuter les
+valeurs de deux variables entières lues au clavier .
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme Permutation
+Variables
+   a , b , tmp : Entier
+   Ecrire ( " Entrer a : " )
+    Lire ( a )
+    Ecrire ( " Entrer
+    Lire ( b )
+                   b : " )
+    Ecrire ( " Avant permuatation a = " , a ,
+    " et b = " , b )
+    tmp < -- a
+    a < -- b
+    b < -- tmp
+    Ecrire ( " Après permuatation a = " , a ,
+    " et b = " , b )
+Debut
+Fin
+
+
+
+/////////////EXERCICE 3/////////////////////
+Écrire un algorithme qui permet
+équation du second degré .
+                                  la résolution d'une
+                                  ax² + bx + c = 0
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme équationseconddegré
+variables
+      a, b, c : Entier
+      delta : Entier
+      x1, x2 : Réel
+Debut       
+      Ecrire("Donner les coefficients a, b, c :")
+      Lire(a, b, c)
+      delta <-- b*b - 4*a*c  
+      SI delta < 0 ALORS
+         Ecrire("AUCUNE SOLUTION")
+      SINOSI delta = 0 ALORS  
+         x1 <-- -b/2*a
+         Ecrire ("x1 = " , x1)
+      SINON
+         x1 <-- (-b+sqrt(delta))/2*a
+         x2 <-- (b+sqrt(delta))/2*a
+         Ecrire("x1 = ", x1)
+         Ecrire("x2 = ", x2)
+      FINSI
+Fin
+
+
+
+
+/////////////EXERCICE 4/////////////////////
+Ecrire un algorithme qui demande à l'utilisateur une note compris entre 0 et 20
+jusqu'à ce que la réponse convienne . Ensuite afficher la mention la note :
+      " Très bien " pour une moyenne comprise entre 16 et 20
+      " Bien " pour une moyenne comprise entre 14 et 16
+      " Assez bien " pour une moyenne comprise entre 12 et 14
+      " Passable pour une moyenne comprise entre 10 et 12
+      " Redoublant pour une moyenne inférieure à 10
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme Mention 
+Variable
+   note : Réel
+Debut
+    Répeter
+          lire(note)
+    Jusqua ( note >=0 ET note <= 20)
+
+    lire(note)
+    Tantque (note < 0 OU note > 20)
+    FinTQ
+
+    SI  note >= 16 ALORS
+          Ecrire("Trés bien")
+    SINONSI note >= 14 Et note < 16 ALORS
+          Ecrire("Bien")     
+    SINONSI note >= 12 Et note < 14 ALORS
+    Ecrire("Assez Bien")  
+    SINONSI note >= 10 Et note < 10 ALORS
+    Ecrire("Passable")  
+    SINONSI note >= 0 Et note < 10 ALORS
+    Ecrire("Redoublant")  
+    FINSI
+Fin
+
+
+
+
+/////////////EXERCICE 5/////////////////////
+Ecrire un algorithme qui permet de calculer la somme :
+
+         1 + 1/4 + 1/9 + .... +1/n*n
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme Somme
+Variable
+   n : Entier
+   somme = Réel
+Debut
+   Ecrire("Entrer n :")
+   lire("n")
+   somme <-- 0
+   pour i <-- 1 jusqua n faire
+    somme <-- somme + (1/i*i)
+   finpour
+   Ecrire ("La somme est :", somme)
+Fin
