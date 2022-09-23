@@ -1,0 +1,95 @@
+/////////////EXERCICE 1/////////////////////
+Écrire un algorithme qui permet de calculer de la somme et la
+moyenne des éléments d'un tableau de n réels donnés
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme SMTableau
+Variables
+    T : Tableau[100]
+    n, i : Entier
+    sun , avg : Réel
+Debut
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T")
+    pour i <-- 1 jusquA n faire
+       Lire(T[i])
+    finpour
+    sum <-- 0
+    pour i <-- 1 jusquA n faire
+        sum <-- sum + T[i]
+    finpour    
+    Ecrire("La somme des élemeny est : ", sum)
+    avg <-- sum / n
+    Ecrire("La moyenne des élemeny est : ", avg)
+Fin
+
+
+
+/////////////EXERCICE 2/////////////////////
+Écrire un algorithme permettant d'afficher la plus grande
+valeur réelle dans un tableau en précisant quelle position elle
+occupe .
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme PGVTableau
+Variables
+    max, T : Tableau[100] de Réel
+    position, n, i : Entier
+Debut
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T")
+    pour i <-- 1 jusquA n faire
+       Lire(T[i])
+    finpour
+    max <-- T[1]
+    position <-- T[1]
+    pour i <-- 1 jusquA n faire
+        SI max < T[i] ALORS
+           max <-- T[i]
+           position <-- i
+    finpour    
+    Ecrire("La plus grande valeur est : ", max
+    et "sa position est , position")
+Fin
+
+
+
+/////////////EXERCICE 3/////////////////////
+Écrire un algorithme permettant d'afficher la plus grande
+valeur réelle dans un tableau en précisant quelle position elle
+occupe .
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme PGVTableau
+Variables
+    T : Tableau[100] de Réel
+    nbrpos , nmbrneg, n, i : Entier
+Debut
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T")
+    pour i <-- 1 jusquA n faire
+       Lire(T[i])
+    finpour
+    nbrpos <-- 0
+    nmbrneg <-- 0
+    pour i <-- 1 jusquA n faire
+        SI T[i] < 1 ALORS
+           nmbrneg <-- nmbrneg + 1
+        SINON 
+           nmbrpos <-- nmbrpos + 1   
+    finpour    
+    Ecrire("Le nombre des valeurs posetives est : ", nmbrpos
+    et "Le nombre des valeurs posetives est : " , nmbrneg")
+Fin
