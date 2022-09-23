@@ -130,3 +130,129 @@ Debut
     finpour 
     
 Fin
+
+
+
+
+
+
+/////////////EXERCICE 4/////////////////////
+Ecrivez un algorithme constituant un tableau , à partir de
+deux tableaux de méme longueur . Le nouveau tableau sera
+la somme des éléments des deux tableaux de départ .
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme PGVTableau
+Variables
+    T1, T2 ,T : Tableau[100] de Réel
+    n, i : Entier
+Debut
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T")
+    pour i <-- 1 jusquA n faire
+       Lire(T[i])
+    finpour
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T2")
+    pour i <-- 1 jusquA n faire
+       Lire(T2[i])
+    finpour 
+    Ecrire ( " Les valeurs de T sont " )
+    pour T[i] <-- T1[i] + T2[i] jusquA n faire
+       Lire(T[i])
+    finpour 
+    
+Fin
+
+
+
+
+/////////////EXERCICE 4/////////////////////
+• Soit T1 un tableau de 100 valeurs ordonnées de manière
+ croissante .
+• Ecrire un algorithme permettant de construire deux
+ nouveaux tableaux contenant l'un les valeurs paires , l'autre
+ les valeurs impaires .
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme PGVTableau
+Variables
+    T1, T2 ,T : Tableau[100] de Réel
+    n, i : Entier
+Debut
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T")
+    pour i <-- 1 jusquA n faire
+       Lire(T[i])
+    finpour
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T2")
+    pour i <-- 1 jusquA n faire
+       Lire(T2[i])
+    finpour 
+    Ecrire ( " Les valeurs de T sont " )
+    pour T[i] <-- T1[i] + T2[i] jusquA n faire
+       Lire(T[i])
+    finpour 
+    
+Fin
+
+
+
+
+/////////////EXERCICE 5/////////////////////
+• Soit T1 un tableau de 100 valeurs ordonnées de manière
+ croissante .
+• Ecrire un algorithme permettant de construire deux
+ nouveaux tableaux contenant l'un les valeurs paires , l'autre
+ les valeurs impaires .
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+
+Algorithme PGVTableau
+Variables
+    Tpair, Tinpair ,T1 : Tableau[100] d'Entier
+    j ,k , n, i : Entier
+Debut
+    Répeter
+       Lire(n)
+    JusquA (n>0 et n <=100)
+    Ecrire("Entrer les valeurs de T")
+    pour i <-- 1 jusquA n faire
+       Lire(T[i])
+    finpour
+    j <-- 1
+    k <-- 1
+    pour i < -- 1 jusquA n faire
+    SI T [ i ] Mod 2 = 0 FAIRE
+        TPair [ j ] < -- T [ i ]
+        j < -- j + 1
+    SINON
+        TImpair [ k ] < -- T [ i ]
+        k < -- k + 1
+    FINSI
+finpour
+Ecrire ( " Les valeurs paires sont " )
+pour j < -- 1 jusquA n faire
+    Ecrire ( TPair [ j ] )
+finpour
+Ecrire ( " Les valeurs impaires sont " )
+pour k < -- 1 jusquA n faire
+    Ecrire ( TImpair [ k ] )
+finpour
+   
+    
+Fin
