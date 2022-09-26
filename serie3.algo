@@ -1,0 +1,527 @@
+***********
+
+/////////////EXERCICE 1/////////////////////
+Ecrire un algorithme qui demande le nom et |'age d'un étudiant
+l'université et afficher "Bonjour ..., tu as ... ans et bienvenue
+luniversité’ en remplagant les ... par, respectivement le nom et I'age.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme etudiant
+Variables
+    nom : chaine de charactere 
+    age : Entier
+Debut
+    Ecrire ("Ajouter votre nom :")
+    Lire (nom)
+    Ecrire ("Ajouter votre age :")
+    Lire (age)
+    Ecrire ("Bonjour " , age ," tu as ", ans , "ans et bienvenue a
+luniversité")
+Fin
+
+
+
+
+/////////////EXERCICE 2/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de taper la largeur et la
+longueur d'un rectangle et qui en affiche le périmétre et la surface.
+
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme PSRectangle
+Variables
+    largeur ,longueur: Reel
+    perimetre, surface : Reel
+Debut
+    Ecrire ("Ajouter la longueur :")
+    Lire (longueur)
+    Ecrire ("Ajouter la largeur :")
+    Lire (largeur)
+    surface <-- longueur*largeur
+    perimetre <-- (longueur+largeur)*2
+    Ecrire (" la longueur de votre rectangle est " , longueur ," et le perimetre est ", perimetre )
+Fin
+
+
+
+
+/////////////EXERCICE 3/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir deux réels X et
+Y, et qui affiche la puissance x’.
+
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme Puissance
+Variables
+    Y ,X ,P : Reel
+Debut
+    Ecrire ("Ajouter X , Y :")
+    Lire (X , Y)
+    P <-- X ^ (Y)
+    Ecrire (" la puissance de X est " , P )
+Fin
+
+
+
+
+/////////////EXERCICE 4/////////////////////
+Ecrire un algorithme opérations qui calcule la somme, le produit, la
+différence et la division de deux nombre réels.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme SPDDnombres
+Variables
+    Y ,X: Réel
+    S, P , DF , DV : Réel
+Debut
+    Ecrire ("Ajouter le nombre X :")
+    Lire (X)
+    Ecrire ("Ajouter le nombre Y :")
+    Lire (Y)
+    S <-- X + Y
+    P <-- X * Y
+    DF <-- X - Y
+    DV <-- X / Y
+    Ecrire (" la somme de votre nombres est : , S )
+    Ecrire (" le produit de votre nombres est : , P )
+    Ecrire (" la différence de votre nombres est : , DF )
+    Ecrire (" la division de votre nombres est : , DV )
+Fin
+
+
+
+/////////////EXERCICE 5/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de taper 5 notes et qui
+affiche leur somme et leur moyenne.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme SMNotes
+Variables
+    N1, N2 , N3 , N4 , N5 : Réel
+    S, M : Réel
+Debut
+    Ecrire ("Ajouter la Note 1:")
+    Lire (N1)
+    Ecrire ("Ajouter la Note 2:")
+    Lire (N2)
+    Ecrire ("Ajouter la Note 3:")
+    Lire (N3)
+    Ecrire ("Ajouter la Note 4:")
+    Lire (N4)
+    Ecrire ("Ajouter la Note 5:")
+    Lire (N5)
+    S <-- N1 + N2 + N3+ N4+ N5
+    M <-- S / 5
+    Ecrire (" la somme de votre note est : , S )
+    Ecrire (" la moyenne de votre notes est : , M )
+Fin
+
+
+
+/////////////EXERCICE 6/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de taper le rayon d'une
+sphére, puis calcule et affiche son volume.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme Ssphere
+Variables
+    N1, N2 , N3 , N4 , N5 : Réel
+    R, V : Réel
+Constante
+    Pi = 3.14 
+Debut
+    Ecrire ("Ajouter e rayon de votre sphere :")
+    Lire (R)
+    V <-- (4*Pi*(R^3))/3
+    Ecrire (" le volume de votre sphre est : , V )
+Fin
+
+
+
+
+
+/////////////EXERCICE 7/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir 2 entiers A et B,
+qui échange le contenu des variables A et B puis qui affiche A et B.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme échange
+Variables
+    A , B : Entier
+    CH : Entier
+Debut
+    Ecrire ("Ajouter A et B :")
+    Lire (A , B)
+    CH <-- A
+    A  <-- B
+    B  <-- CH
+    Ecrire (" A : " B)
+    Ecrire (" B :" A)
+Fin
+
+
+
+
+
+/////////////EXERCICE 8/////////////////////
+Ecrire un algorithme qui demande a 'utilisateur de saisir 2 entiers A et B,
+qui échange le contenu des variables A et B puis qui affiche AetB. Cette
+fois sans utiliser d’autre variable que A et B.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme échange
+Variables
+    A , B : Entier
+Debut
+    Ecrire ("Ajouter A et B :")
+    Lire (A , B) // 6 , 3
+    A <-- A + B  //  6 + 3 = 9
+    B  <-- A - B   // 9 - 3 = 6 
+    A  <-- A - B // 9 - 6 = 3
+    Ecrire (" A : " B)
+    Ecrire (" B :" A)
+Fin
+
+
+
+/////////////EXERCICE 9/////////////////////
+Ecrire un algorithme qui demande un temps T (entier) exprimé en
+secondes, et qui le convertit en heures, minutes, secondes.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme Convertitre
+Variables
+    T  : Entier
+    H, M, S  : Réel
+Debut
+    Ecrire ("Ajouter un temps :")
+    Lire (T) 
+    H <-- T Div (60*60)
+    R <-- T Mod 60*60
+    M <--  R Div 60 
+    S <-- R Mod 60
+
+    S <-- ( T / 1 ) - M
+    Ecrire  ( H ,"heurs ", M ,"minutes", S ,"seconde")
+Fin
+
+
+
+
+
+/////////////EXERCICE 10/////////////////////
+Ecrire un algorithme Signe qui retourne si deux nombres entiers donnés
+sont de méme signe ou non.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme signe
+Variables
+    A , B : Entier
+Debut
+    Ecrire ("Ajouter Deux nombres :")
+    Lire (A , B ) 
+    SI A * B > 0 ALORS
+       Ecrire("méme signe")
+    SINON 
+       Ecrire("signe différent")
+    FINSI   
+Fin
+
+
+
+
+/////////////EXERCICE 11/////////////////////
+Ecrire un algorithme Echange_Cond qui échange les contenus de deux
+données numérique si elles sont de méme signe, sinon il met la somme
+des deux dans la premiére donnée et leur produit dans la seconde.
+
+////////////////////////////////////////////////////////
+////////////////   SOLUTION   ///////////////////////////////////////
+Algorithme Echange_Cond
+Variables
+    A , B , C , D: Réel
+Debut
+    Ecrire ("Ajouter Deux nombres :")
+    Lire (A , B ) 
+    SI A * B > 0 OU A * B < 0 ALORS
+       C <-- A
+       A <-- B
+       B <-- C
+       
+    SINON 
+       C <-- A + B
+       D <-- A * B
+       A <-- C
+       B <-- D
+       
+    FINSI   
+    Ecrire ("A :" A)
+    Ecrire ("B :" B)
+Fin
+
+
+
+
+/////////////EXERCICE 12/////////////////////
+Un magasin facture 0,30 dh les dix premiéres photocopies, 0,25 dh les
+vingt suivantes et 0,20 dh au-dela. Rédiger un algorithme qui demande a
+l'utilisateur le nombre de photocopies effectuées et qui affiche la facture
+correspondante.
+
+////////////// SOLUTION //////////////////////
+Algorithme facture
+Variables
+    P , F : Réel
+Debut
+    Ecrire ("Ajouter nombres de photocopies :")
+    Lire (P) 
+    SI P <= 10 ALORS
+       F <-- P * 0.30
+    SINON SI P >= 30 
+       F <-- ( (10 * 0.30) + (P-10) *0.25 )
+    SINON 
+       F <-- ( (10 * 0.30) + (P-10) * 0.25 + (P-30)*0.20 )
+    FINSI   
+    Ecrire ("facture :" F)
+Fin
+
+
+
+
+/////////////EXERCICE 13/////////////////////
+Ecrire un algorithme qui demande lage d’un enfant a T'utilisateur.
+Ensuite, il I'informe de sa catégorie : "Poussin" de 6 a 7 ans, "Pupille" de 8
+a9 ans, "Minime” de 10 et 11 ans, "Cadet" aprés 12 ans.
+
+////////////// SOLUTION //////////////////////
+Algorithme catégorie
+Variables
+    A : Réel
+Debut
+    Ecrire ("Ajouter l age:")
+    Lire (A)
+    SI  6 <= A <= 7  ALORS
+       Ecrire ("Poussin")
+     SINON 
+     SI 8 <= A <= 9
+        Ecrire ("Pupille")
+      SINON 
+      SI 10 <= A <= 11
+         Ecrire ("Minime") 
+       SINON
+          Ecrire ("Cadet") 
+      FINSI   
+     FINSI
+    FINSI
+    Ecrire ("facture :" F)
+Fin
+
+
+
+
+
+/////////////EXERCICE 14/////////////////////
+Ecrire un algorithme permettant de saisir trois notes (sur 20) d'un
+étudiant, calculant sa moyenne et affichant cette moyenne avec la
+mention ("Trés bien" a partir de 16, "Bien" entre 14 et 16, "Assez bien"
+entre 12 et 14, "Passable” entre 10 et 12, "Insuffisant" en dessous de 10)
+PS : En suppose que |'étudiant va saisir des notes comprises entre 0 et
+20.
+
+////////////// SOLUTION //////////////////////
+Algorithme notes
+Variables
+    M , N1, N2, N3: Réel
+Debut
+   Ecrire ("Entrer les trois notes :")
+   Lire (N1, N2, N3)
+   M <-- (N1 + N2 + N3) / 3
+   SI M => 16 ALORS
+      Ecrire ("Très Bien") 
+        SINON
+        SI 14 <= M et M < 16 ALORS
+        Ecrire ("Bien") 
+          SINON
+          SI 12 <= M et M < 14 ALORS
+          Ecrire ("Asser Bien") 
+            SINON
+            SI 10 <= M et M < 12 ALORS
+            Ecrire ("Passable") 
+              SINON
+          Ecrire ("Insuffisant") 
+            FINSI   
+          FINSI
+        FINSI
+      FINSI
+    FINSI
+Fin
+
+
+
+/////////////EXERCICE 15/////////////////////
+Ecrire un algorithme qui affiche la ou les solutions d'une équation du
+second degré de la forme ax^2 + bx +c.
+
+PS: Pour calculer la racine carrée d'un nombre, nous utilisons la fonction : racine.
+Exemple : Aprés l'exécution de I'instruction suivante la valeur de A sera 2.
+A <-- racine(4)
+
+////////////// SOLUTION //////////////////////
+Algorithme Equation
+Variables
+    a, b, c ,X ,X1, X2 : Reel
+Constante
+    delta =  a*x^2 + b*x +c
+Debut
+    Ecrire ("donner les trois nombres a , b , c :")
+    Lire (a ,b ,c)
+    delta <--  a*x^2 + b*x +c
+    SI delta < 0 
+        Ecrire ("la fct n a pas de solution")
+      SINON
+        SI delta = 0 
+        X <-- -b/2*a
+        Ecrire ("la fct a une seule solution ", X1)
+          SINON
+          X1 <-- -b-racine(delta)/2*a 
+          X2 <-- -b+racine(delta)/2*a 
+          Ecrire ("la fct a deux solutionx ", X1 , X2)
+          FINSI
+        FINSI
+    FINSI      
+Fin
+
+
+
+/////////////EXERCICE 16/////////////////////
+Les habitants d'une ville paient l'impot selon les regles suivantes :
+
+- Les hommes de plus de 20 ans paient I’impot
+
+- Les femmes paient l’impot si elles ont entre 18 et 35 ans
+
+- Les autres ne paient pas d'impot
+
+Ecrire un algorithme qui demande |’age et le sexe d'un habitant et affiche
+si celui-ci est imposable.
+
+////////////// SOLUTION //////////////////////
+Algorithme impot
+Variables
+     A  : Reel
+     S , I : chaine de charactere
+Constante
+    delta =  a*x^2 + b*x +c
+Debut
+    Ecrire ("saisir votre age :")
+    Lire (A)
+    Ecrire ("saisir votre genre :")
+    Lire (G)
+      Si (age >= 20 et G = "Homme") ou (age >= 18 et age <= 35 G = "Femme")  
+      I <-- "paient L'impot"
+      SINON
+      I <-- "ne paient pas d'impot"
+      FINSI
+    FINSI      
+    Ecrire (I)
+Fin
+
+
+
+
+
+/////////////EXERCICE 17/////////////////////
+Les produits vendus dans un magasin sont classés en trois catégories de
+point de vue TVA : A=7%, B=20% et C=25%. Ecrivez un algorithme Prix
+qui calcule le prix TTC d'un produit connaissant son prix hors taxe et sa
+catégorie.
+
+////////////// SOLUTION //////////////////////
+Algorithme impot
+Variables
+    PHT : Reel
+    categorie : caractere
+Debut
+    Ecrire ("saisir le prix de produit :")
+    Lire (PHT)
+    Ecrire ("saisir la categorie :")
+    Lire (categorie)
+    CAS categorie VAUT
+        "A" : Ecrire ("Le prix TTC  de produit est" ,PHT + PHT * 0.07)
+        "B" : Ecrire ("Le prix TTC  de produit est" ,PHT + PHT * 0.20)
+        "C" : Ecrire ("Le prix TTC  de produit est" ,PHT + PHT * 0.25)
+    Sinon : Ecrire("La catégorie n'existe pas")
+    FIN CAS
+Fin
+
+
+
+/////////////EXERCICE 18/////////////////////
+Etant donné un mois, écrivez un algorithme Nbre_Jours qui retourne le
+nombre des jours de ce mois.
+
+////////////// SOLUTION //////////////////////
+Algorithme mois
+Variables
+    M : chaine caractere
+Debut
+    Ecrire ("saisir le nom du mois :")
+    Lire (M)
+    CAS M VAUT
+        "janvier"   : Ecrire ("31 jours")
+        "fevrier"   : Ecrire ("28 ou 29 jours")
+        "mars"      : Ecrire ("31 jours")
+        "avril"     : Ecrire ("30 jours")
+        "mai"       : Ecrire ("31 jours")
+        "Juin"      : Ecrire ("30 jours")
+        "Juillet"   : Ecrire ("31 jours")
+        "Aoat"      : Ecrire ("31 jours")
+        "Septembre" : Ecrire ("30 jours")
+        "Octobre"   : Ecrire ("31 jours")
+        "Novembre"  : Ecrire ("30 jours")
+        "Décembre"  : Ecrire ("31 jours")
+    Sinon : Ecrire("Le nom du Mois est Faux")
+    FIN CAS
+Fin
+
+
+
+
+/////////////EXERCICE 19/////////////////////
+Rédiger un algorithme qui demande deux ‘nombres entiers et l'une des
+opérateurs suivant: +,-,*,/ puis effectue operation correspond et
+affiche le résultat de wai qceation
+
+////////////// SOLUTION //////////////////////
+Algorithme mois
+Variables
+    A , B : Entier
+    O : caractere
+Debut
+    Ecrire("Donner deux nombre :")
+    Lire (A , B)
+    Ecrire("Choisire un operateur")
+    Lire("O")
+    CAS O VAUT
+    "+" :  Ecrire("resultat :", A + B ) 
+    "-" :  Ecrire("resultat :", A - B ) 
+    "*" :  Ecrire("resultat :", A * B ) 
+    "/" :  SI B <> 0 alors
+           Ecrire("resultat :", A / B )
+           SINON 
+           Ecrire("la division par 0 est impossible")
+           FINSI
+        SINON : Ecrire ("l'operation impossible )  
+      FINSI
+    FIN CAS   
+Fin

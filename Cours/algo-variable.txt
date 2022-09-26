@@ -1,0 +1,44 @@
+‼️Les bases de l'algorithmique - Les variables ‼️
+
+A. Définition
+Une variable est un objet destiné à stocker une information pendant l’exécution d’un algorithme. Il existe plusieurs (5) types de variables:
+- les caractères,
+- les chaînes de caractères,
+- les entiers,
+- les réels,
+- et les booléens.
+
+B. Déclaration
+La déclaration consiste à réserver de l’espace en mémoire pour une variable. On demande à la machine de réserver un emplacement mémoire pour stocker une information durant l’exécution. Cet emplacement est identifié par un nom unique. Deux variables ne peuvent pas porter le même nom, cela créerait un conflit. Voici comment déclarer une variable. Le mot clé VAR indique le début de la section déclaration de variables. 
+
+VAR <nom variable 1> : <type variable 1>
+        <nom variable 2> : <type variable 2>
+
+1. Caractère
+VAR sexe: caractère
+Cette instruction indique à la machine que l’on souhaite réserver de l'espace en mémoire sous le nom mon_caractere, ainsi dans notre algorithme, on pourra stocker un caractère dans la variable mon_caractere.
+
+2. Chaînes de caractères
+VAR nom: chaîne de caractères
+
+3. Entier
+VAR age: entier
+Une variable de type entier peut stocker des valeurs relatifs (1, -12).
+
+4. Réel
+VAR taille: réel
+
+5. Booléen
+VAR majeur : booléen
+Un booléen ne peut prendre que deux valeurs VRAI et FAUX.
+
+C. Affectation
+Affecter une valeur à une variable consiste à lui assigner une valeur. L'affectation se fait grâce à l'opérateur <-.
+
+sexe <- 'M'
+nom <- "Joseph" 
+age <- 23
+taille <- 1.73
+majeur <- VRAI
+. 
+.
