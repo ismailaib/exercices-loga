@@ -525,3 +525,299 @@ Debut
       FINSI
     FIN CAS   
 Fin
+
+
+
+
+/////////////EXERCICE 20/////////////////////
+Ecrire un programme qui demande un nombre de départ, et qui ensuite
+affiche les dix nombres suivants en utilisant la boucle Pour. Par exemple,
+si l'utilisateur entre le nombre 33, le programme affichera les nombres de
+34 a 43.
+
+////////////// SOLUTION //////////////////////
+Algorithme départ
+Variables
+    N , i: Entier
+Debut
+    Ecrire("Donner un nombre :")
+    Lire (N)
+    Pour i <-- N+1 a N+10 pas 1 Faire  
+         Ecrire(i)
+    FinPour     
+Fin
+
+
+
+
+
+
+/////////////EXERCICE 21/////////////////////
+Ecrire un programme qui demande un nombre de départ, et qui ensuite
+affiche les dix nombres suivants en utilisant la boucle Tant que 
+
+Par exemple, si l'utilisateur entre le nombre 33, le programme affichera
+les nombres de 34 a 43.
+
+////////////// SOLUTION //////////////////////
+Algorithme départ
+Variables
+    N , i: Entier
+Debut
+    Ecrire("Donner un nombre :")
+    Lire (N)
+    i <-- N + 1
+    Tanq que i <= ( N + 10 ) Faire
+    Ecrire (i)     
+    i <-- i + 1
+    FinTanque
+Fin
+
+/////////////EXERCICE 22/////////////////////
+Ecrire un programme qui demande un nombre de départ, et qui ensuite
+affiche les dix nombres suivants en utilisant la boucle 
+Répeter ... jusqu’a ....
+
+Par exemple, si l'utilisateur entre le nombre 33, le programme affichera
+les nombres de 34 a 43.
+
+////////////// SOLUTION //////////////////////
+Algorithme départ
+Variables
+    N , i: Entier
+Debut
+    Ecrire("Donner un nombre :")
+    Lire (N)
+    i <-- N + 1
+    Repeter  
+    Ecrire (i)
+    jusqu’a  i > (N + 10)    
+Fin
+
+
+/////////////EXERCICE 23/////////////////////
+Ecrire un algorithme qui calcule et affiche la somme :
+
+S = 1/1 + 1/2 + 1/3 + ... + 1/n
+
+////////////// SOLUTION //////////////////////
+Algorithme départ
+Variables
+    n , i = Entier
+    S = Reel
+Debut
+
+    Ecrire("Entrer la valeurs de n :")
+    Lire(n)
+    S <-- 0
+    POUR i <-- 1 A n PAS 1 Faire
+    S <-- S + (1 / i)
+    FINPOUR
+    Ecrire ("la somme est" , S)    
+
+Fin
+
+
+
+/////////////EXERCICE 24/////////////////////
+ 
+
+Ecrire un algorithme qui calcule et affiche la somme :
+s = 1 + 10 + 100 + ... + 10^n
+
+////////////// SOLUTION //////////////////////
+Algorithme Somme
+Variables
+    n , i = Entier
+    S = Reel
+Debut
+
+    Ecrire("Entrer la valeurs de n :")
+    Lire(n)
+    S <-- 0
+    POUR i <-- 0 A n PAS 1 Faire
+    S <-- S + (10^i)
+    FINPOUR
+    Ecrire ("la somme est" , S)    
+
+Fin
+
+
+
+/////////////EXERCICE 25/////////////////////
+
+Ecrire un algorithme qui demande un nombre positif non nul de départ, et
+qui calcule sa factorielle.
+Par exemple, la factorielle de 6, notée 6!, vaut 1 x 2 x 3 x 4 x 5 x 6 .
+////////////// SOLUTION //////////////////////
+Algorithme Factorielle
+Variables
+    n , i = Entier
+    F = Reel
+Debut
+TANQUE ( n <= 0  )
+    Ecrire("Entrer une valeur positif de n :")
+    Lire(n)
+FinTanque   
+    F <-- 1
+    POUR i <-- 1 A n PAS 1 Faire
+    F <-- (F * i)
+    FINPOUR
+    Ecrire ("la somme est" , S)    
+
+Fin
+
+
+
+
+/////////////EXERCICE 26/////////////////////
+
+Ecrire un programme qui demande a l'utilisateur de taper un entier n,
+puis qui calcule la somme des carrées des n premiers entiers impairs.
+Par exemple, si n= 5 le résultat est : 1^2 + 3^2 + 5^2 + 7^2 + 9^2 = 165.
+
+////////////// SOLUTION //////////////////////
+Algorithme somme
+Variables
+    n , i = Entier
+    S = Reel
+Debut
+    Ecrire("Entrer une valeur de n :")
+    Lire(n)
+    S <-- 0
+    POUR i <-- 1 a n PAS 2 Faire
+        S <-- S + (i ^ 2)
+    FINPOUR
+
+
+Fin
+
+
+
+
+
+/////////////EXERCICE 27/////////////////////
+
+A la naissance de(Amal/ son grand-pére Ali, lui ouvre un compte
+bancaire. Ensuite, chaque anniversaire, le grand pére de Amal verse sur
+son compte 500dh, auxquels il ajoute le triple de I'age de Amal. Par
+exemple, lorsqu’elle a quatre ans, il lui verse 512dh. Ecrire un algorithme
+qui permette de déterminer quelle somme aura Amal lors de son niéme
+anniversaire
+
+////////////// SOLUTION //////////////////////
+Algorithme somme
+Variables
+    a , i = Entier
+    S = Reel
+Debut
+    Ecrire("Entrer l' age  :")
+    Lire(a)
+    S <-- 0
+    POUR i <-- 1 a a PAS 1 Faire
+        S <-- S + ( 500 + i * 3)
+    FINPOUR
+    Ecrire("la somme est  :" , S )
+Fin
+
+
+
+
+
+/////////////EXERCICE 28/////////////////////
+
+La population de la ville Marrakech est de 1, 000, 000 d’habitants et elle
+augmente de 50, 000 habitants par an. Celle de la ville Agadir est de 500,
+000 habitants et elle augmente de 8% par an. Ecrire un algorithme
+permettant de déterminer dans combien d’années la population de la
+ville Agadir dépassera celle de la ville Marrakech.
+
+////////////// SOLUTION //////////////////////
+Algorithme population
+
+Variables
+nbr_ans : entier
+p_aga , p_kech : réel
+
+Début
+
+p_kech <-- 1000000
+p_aga <-- 500000
+nbr_ans <-- 0
+Tant que p_kech > p_aga ALORS
+p_kech <-- p_kech + 50000
+p_aga <-- p_aga * 1.08
+nbr_ans <-- nbr_ans + 1
+fin Tant que
+
+Ecrire("Agadir dépassera Marrakech aprés " , nbr_ans , " ans ")
+
+Fin
+
+
+
+
+/////////////EXERCICE 29/////////////////////
+
+Ecrire un algorithme qui demande  I'utilisateur de taper un entier n
+(rang) et qui calcule le terme U,, de la suite U défini par :
+
+    |  U0 = 6
+    |  Un+1 = 4 Un + 10
+
+////////////// SOLUTION //////////////////////
+Algorithme suite
+
+Variables
+n , U , i: entier
+
+Début
+
+    Ecrire("Entrer le nom n :")
+    Lire(a)
+    U <-- 6
+    POUR i <-- 1 a a PAS 1 Faire
+        U <-- 4 * U + 10
+    FINPOUR
+    Ecrire("U  =" , S )
+
+Fin
+
+
+/////////////EXERCICE 30/////////////////////
+
+Ecrire un algorithme qui demande  I'utilisateur de taper un entier n
+(rang) et qui calcule le terme U,, de la suite U défini par :
+
+    |  Upp = 0
+    |  Up = 1
+    |  Un+2 = Un+1  + Un
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Fibonacci
+
+Variables
+n,i, 8, Up, Upp: entier
+
+Début
+
+Répeter
+Ecrire("Veuillez saisir la valeur den: ")
+Lire (n)
+
+Jusqu'a n >= 2
+Upp <-- 0
+Up <-- 1
+
+Ecrire("Les termes de la suite de Fibonacci sont : ")
+Ecrire (Upp)
+Ecrire (Up)
+
+Pour i <-- 2 an pas | faire
++ Up
+
+
+
+Fin
+
