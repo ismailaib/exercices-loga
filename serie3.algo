@@ -804,20 +804,235 @@ Début
 
 Répeter
 Ecrire("Veuillez saisir la valeur den: ")
-Lire (n)
+    Lire (n)
+    Jusqu'a n >= 2
 
-Jusqu'a n >= 2
-Upp <-- 0
-Up <-- 1
+    Upp <-- 0
+    Up <-- 1
 
 Ecrire("Les termes de la suite de Fibonacci sont : ")
 Ecrire (Upp)
 Ecrire (Up)
 
-Pour i <-- 2 an pas | faire
-+ Up
+Pour i <-- 2 a n pas 1 faire
+    U <-- Upp + Up
+    Ecrire(U)
+    Upp <-- Up
+    Up <-- U
+    FINPOUR
+Fin
 
 
+
+
+
+/////////////EXERCICE 31/////////////////////
+
+Ecrire un algorithme qui déclare, remplisse et affiche un tableau de 10
+entiers en les mettant tous a zéro.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    Tableau T[10] : Entier
+    i : Entier
+Début
+    Pour i <-- 0 a 9 faire
+        T[i] <-- 0
+    FinPour
+    Pour i <-- 0 a 9 faire
+        Ecrire (T[i])
+    FinPour
 
 Fin
 
+
+
+
+/////////////EXERCICE 32/////////////////////
+
+Ecrire un algorithme qui déclare, remplisse et affiche un tableau
+contenant les six voyelles de l'alphabet francais.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    Tableau T[6] : caractere
+    i : Entier
+Début
+    v[0] <-- "A"
+    v[1] <-- "E"
+    v[2] <-- "I"
+    v[3] <-- "O"
+    v[4] <-- "U"
+    v[5] <-- "Y"
+    Ecrire(les six voyelles de l'alphabet francais sont , )
+    Pour i <-- 0 a 5 pas 1 Faire
+       Ecrire(T(i))
+    FinPour   
+Fin
+
+
+
+
+
+/////////////EXERCICE 33/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir 10 réels stockés
+dans un tableau, puis l’algorithme calcule et affiche la somme, le produit
+et la moyenne des éléments du tableau.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    Tableau T[10] : caractere
+    i : Entier
+Début
+    POUR i <-- 0 a 10 pas 1 Faire
+        Ecrire("Donner la valeur de : " , i+1)
+        Lire(T[i])
+    finpour
+    S <-- 0
+    P <-- 1
+    S <-- S + T(i)
+    P <-- S * T(i)
+    M <-- S / 10
+    Lire (S)
+    Lire (P)
+    Lire (M)
+Fin
+
+
+
+
+
+
+
+/////////////EXERCICE 34/////////////////////
+Ecrire un algorithme qui effectue le produit scalaire de deux vecteurs de
+méme taille (3 éléments) représentés par des tableaux a une dimension.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    Tableau V[3] : Reel
+    Tableau U[3] : Reel
+    i : Entier
+    P : Reel
+Début
+    POUR i <-- 0 a 2 pas 1 Faire
+        Ecrire("Donner la valeur de V : " , i+1)
+        Lire(T[V])
+    finpour
+    POUR i <-- 0 a 2 pas 1 Faire
+        Ecrire("Donner la valeur de U : " , i+1)
+        Lire(T[U])
+    finpour
+    P <-- 0
+    POUR i <-- 0 a 2 pas 1 Faire
+        P <-- P + V(i) * U(i)
+        Lire(P)
+    finpour
+Fin
+
+
+
+
+
+
+
+/////////////EXERCICE 35/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir 10 entiers qu'on
+stocke dans un tableau T. Ensuite, l'algorithme détermine et affiche le
+minimum des éléments du tableau T.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    Tableau T[10] : Entier
+    i : Entier
+    min : Entier
+Début
+    POUR i <-- 0 a 9 pas 1 Faire
+        Ecrire("Donner la valeur de : " , i+1)
+        Lire(T[i])
+    finpour
+    min <-- T[0]
+    POUR i <-- 1 a 9 pas 1 Faire
+        SI min < T[i] alors
+             min = T[i]
+        FINSI      
+    finpour
+    Ecrire(min) 
+Fin
+
+
+
+
+
+
+/////////////EXERCICE 36/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir 10 entiers qu'on
+stocke dans un tableau T. Ensuite, l'algorithme détermine et affiche le
+maximum des éléments du tableau T.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    Tableau T[10] : Entier
+    i : Entier
+    max : Entier
+Début
+    POUR i <-- 0 a 9 pas 1 Faire
+        Ecrire("Donner la valeur de : " , i+1)
+        Lire(T[i])
+    finpour
+    max <-- T[0]
+    POUR i <-- 1 a 9 pas 1 Faire
+        SI max < T[i] alors
+             max = T[i]
+        FINSI      
+    finpour
+    Ecrire(max) 
+Fin
+
+
+
+
+
+
+/////////////EXERCICE 37/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir de 10 entiers
+qu'on stocke dans un tableau_T. Ensuite on redemande a l'utilisateur de
+saisir un entier n. l'objectif étant de chercher l'existence du nombre n
+dans T, le résultat va s'afficher comme suit :
+
+*  Si n se trouve dans T:"n se trouve dans le tableau".
+
++ Si n se trouve pas dans T: "nne se trouve pas dans le_ tableau".
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    Tableau T[10] : Entier
+    i : Entier
+    max : Entier
+Début
+    POUR i <-- 0 a 9 pas 1 Faire
+        Ecrire("Donner la valeur de : " , i+1)
+        Lire(T[i])
+    finpour
+
+Fin
