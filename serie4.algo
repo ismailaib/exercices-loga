@@ -1,1 +1,249 @@
-Algorithme 
+
+
+
+
+
+/////////////EXERCICE 31/////////////////////
+
+Ecrire un algorithme qui déclare, remplisse et affiche un tableau de 10
+entiers en les mettant tous a zéro.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme Tableau
+
+Variables
+     tableau T[10] : entier
+     i : entier
+Début
+    pour i <-- 0 a 9 faire
+       T[i] <-- 0
+    fin pour   
+    pour i <-- 0 a 9 faire
+       Ecrire (T[i])
+    fin pour  
+Fin
+
+
+
+
+/////////////EXERCICE 32/////////////////////
+
+Ecrire un algorithme qui déclare, remplisse et affiche un tableau
+contenant les six voyelles de l'alphabet francais.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    tableau T[6] : entier
+     i : entier
+Début
+    T[1] <-- "A"
+    T[2] <-- "U"
+    T[3] <-- "Y"
+    T[4] <-- "O"
+    T[5] <-- "I"
+    T[6] <-- "E"
+    pour i <-- 0 a 5 faire
+       Ecrire (T[i])
+    fin pour  
+
+    FinPour   
+Fin
+
+
+
+
+
+/////////////EXERCICE 33/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir 10 réels stockés
+dans un tableau, puis l’algorithme calcule et affiche la somme, le produit
+et la moyenne des éléments du tableau.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    i : Entier
+    P, S, M, T[10]: Reel
+Début
+    pour i <-- 0 a 9 pas 1 fair
+    Ecrire(donner un nombre)
+    Lire(T[i])
+    finpour
+    S <-- 0
+    P <-- 1
+    pour i <-- 0 a 9 Faire
+    S <-- T[i] + S
+    finpour
+    pour i <-- 0 a 9 Faire
+    P <-- T[i] * P
+    finpour
+    M <-- S / 10
+    Ecrire ("La somme est :", S)
+    Ecrire ("La produit est :", P)
+    Ecrire ("La moyenne est :", M)
+Fin
+
+
+
+
+
+
+
+/////////////EXERCICE 34/////////////////////
+Ecrire un algorithme qui effectue le produit scalaire de deux vecteurs de
+méme taille (3 éléments) représentés par des tableaux a une dimension.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    i, U[3], V[3]: entier 
+    P : Reel  
+Début
+    POUR i <-- 0 a 2 pas 1 FAIRE
+    Ecrire(donner les valeur de U)
+    Ecrire(donner les valeur de V)
+    Lire(U(i))
+    Lire(V(i))
+    FINPOUR
+    P <-- 0
+    POUR i <-- 0 A 2 PAS 1 FAIRE
+    P <-- P + U(i) * V(i)
+    FINPOUR
+
+Fin
+
+
+
+
+
+
+
+/////////////EXERCICE 35/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir 10 entiers qu'on
+stocke dans un tableau T. Ensuite, l'algorithme détermine et affiche le
+minimum des éléments du tableau T.
+
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    T[10] : Reel
+    i, min: entier
+Début
+    POUR i <-- 0 a 9 pas 1 FAIRE
+        Ecrire (donner le nombre T[i])
+        Lire (T[i])
+    FINPOUR
+    min <-- T[0]
+    POUR i <-- 0 a 9 pas 1 faire
+        SI min > T[i] ALORS
+              min <-- T[i]
+        FINSI
+    FINPOUR    
+Fin
+
+
+
+
+
+
+/////////////EXERCICE 36/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir 10 entiers qu'on
+stocke dans un tableau T. Ensuite, l'algorithme détermine et affiche le
+maximum des éléments du tableau T.
+
+////////////// SOLUTION //////////////////////
+Algorithme suite Tableau
+
+Variables
+    T[10] : Reel
+    i, max: entier
+Début
+    POUR i <-- 0 a 9 pas 1 FAIRE
+        Ecrire (donner le nombre T[i])
+        Lire (T[i])
+    FINPOUR
+    max <-- T[0]
+    POUR i <-- 0 a 9 pas 1 faire
+        SI max < T[i] ALORS
+              max <-- T[i]
+        FINSI
+    FINPOUR    
+Fin
+
+
+
+
+
+/////////////EXERCICE 37/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir de 10 entiers
+qu'on stocke dans un tableau_T. Ensuite on redemande a l'utilisateur de
+saisir un entier n. l'objectif étant de chercher l'existence du nombre n
+dans T, le résultat va s'afficher comme suit :
+
+*  Si n se trouve dans T:"n se trouve dans le tableau".
+
++ Si n se trouve pas dans T: "n ne se trouve pas dans le_ tableau".
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    T[10] : entier
+    i, n, x: entier
+Début
+  POUR i <-- 0 a 9 pas 1 FAIRE
+    Ecrire ("donner le nombre", i + 1 ,":")
+    Lire(T[i])
+    Ecrire ("donner la valeur de n :")
+    Lire(n)
+  FINPOUR
+  x <-- 0 
+  POUR i <-- 0 a 9 pas 1 FAIRE
+      x <-- x + 1 
+  FINPOUR
+       SI n = T[i] ALORS
+       Ecrire("n se trouve dans le tableau")
+       SINON n = T[i] ALORS
+       Ecrire("n ne se trouve pas dans le tableau")
+       FINSI
+    
+Fin
+
+
+
+/////////////EXERCICE 37/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de saisir 50 entiers qu’on
+stocke dans un tableau T. Ensuite on redemande a l'utilisateur de saisir
+un entier(n) L'algorithme ensuite va calculer le nombre d'occurrence de n
+dans T.
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Tableau
+
+Variables
+    T[50] : entier
+    i, n, x: entier
+Début
+  POUR i <-- 0 a 49 pas 1 FAIRE
+    Ecrire ("donner le nombre", i + 1 ,":")
+    Lire(T[i])
+    Ecrire ("donner la valeur de n :")
+    Lire(n)
+  FINPOUR
+  x <-- 0 
+  POUR i <-- 0 a 49 pas 1 FAIRE
+    SI n = T[i] ALORS
+      x <-- x + 1 
+    FINSI
+  FINPOUR
+  Ecrire("Le nombre d'occurence de n dans T est ", x )
+Fin
