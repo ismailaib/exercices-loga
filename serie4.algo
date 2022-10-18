@@ -247,3 +247,124 @@ Début
   FINPOUR
   Ecrire("Le nombre d'occurence de n dans T est ", x )
 Fin
+
+
+
+/////////////EXERCICE 37/////////////////////
+Ecrire un algorithme utilisant une procédure qui permet de saisir un
+nombre entier positif et d'afficher un message indiquant si ce nombre
+est premier ou pas.
+////////////// SOLUTION //////////////////////
+
+Algorithme suite Premier
+Procedure premier (N : entier)
+    Variables
+        i : entier
+        estPremier : booleen
+    Debut
+        estPremier = Vrai
+        POUR i <-- 2 a N div 2 pas 1 FAIRE
+            SI  N mod i = 0 ALORS
+                   estPremier <-- faux
+            FINSI 
+        FINPOUR       
+           SI est Premier = vrai alors
+           Ecrire(N , " est un nombre premier ") 
+           SINON
+           Ecrire(N , " est un nombre non premier ") 
+        FINSI
+    Fin    
+Variables
+    N : entier
+Début
+    Ecrire("donner la valeur de N :")
+    Lire(N)
+    premier(N)
+Fin
+
+
+
+
+/////////////EXERCICE 37/////////////////////
+Ecrire un algorithme utilisant une fonction qui demande l'utilisateur
+d'entrer un entier, puis l'algorithme compte et affiche le nombre de
+chiffres qui composent cet entier.
+////////////// SOLUTION //////////////////////
+
+Algorithme nombre
+
+    Fonction nbr-chiffres (N : entier)
+        Variables
+            nbr : entier
+        Debut
+            nbr <-- 0
+            Repeter 
+                nbr <-- nbr + 1
+                N <-- N div 10
+            Jusqu'a N = 0
+        Fin
+
+Variables
+    N : entier
+Debut
+    Ecrire("Veuillez saisir la valeur de N : ") 
+    Lire(N)
+Fin
+
+
+
+/////////////EXERCICE 38/////////////////////
+Ecrire un algorithme utilisant une fonction qui demande l'utilisateur
+d'entrer un entier, puis l'algorithme compte et affiche le nombre de
+chiffres qui composent cet entier.
+////////////// SOLUTION //////////////////////
+
+Algorithme nombre
+
+    Fonction nbr-chiffres (N : entier)
+        Variables
+            nbr : entier
+        Debut
+            nbr <-- 0
+            Repeter 
+                nbr <-- nbr + 1
+                N <-- N div 10
+            Jusqu'a N = 0
+            Retourne nbr
+        Fin
+
+Variables
+    N : entier
+Debut
+    Ecrire("Veuillez saisir la valeur de N : ") 
+    Lire(N)
+    Ecrire(nbr-chiffres(N))
+Fin
+
+
+
+
+/////////////EXERCICE 39/////////////////////
+Ecrire un algorithme utilisant une fonction qui demande l'utilisateur
+d'entrer un entier, puis l'algorithme compte et affiche le nombre de
+chiffres qui composent cet entier.
+////////////// SOLUTION //////////////////////
+
+Algorithme nombre
+
+    Procedure tab-multi (x : entier)
+        Variables
+            i : entier
+            POUR i<-- 0 à 10 pas 1 faire
+                Ecrire (i, "*" , x , "=" , i*x)
+            FINPOUR    
+        Debut
+
+        Fin
+
+Variables
+    N : entier
+Debut
+    Ecrire("Veuillez saisir la valeur de N : ") 
+    Lire(N)
+Fin
