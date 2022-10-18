@@ -355,10 +355,10 @@ Algorithme nombre
     Procedure tab-multi (x : entier)
         Variables
             i : entier
+        Debut    
             POUR i<-- 0 à 10 pas 1 faire
                 Ecrire (i, "*" , x , "=" , i*x)
             FINPOUR    
-        Debut
 
         Fin
 
@@ -367,4 +367,64 @@ Variables
 Debut
     Ecrire("Veuillez saisir la valeur de N : ") 
     Lire(N)
+Fin
+
+
+
+/////////////EXERCICE 39/////////////////////
+Ecrire un algorithme utilisant des fonctions ou des procédures qui demande à 
+l'utilisateur de saisir le rayon du cercle, puis l'algorithme 
+affiche le diamètre, la surface et le périmètre du cercle.
+////////////// SOLUTION //////////////////////
+
+Algorithme nombre
+    Fonction diametre (  R : Reel) : Reel
+        Variables
+           D : Reel
+        Debut
+           D <-- R * 2
+           Retourne D
+        Fin
+    Fonction surface (  R : Reel) : Reel
+        Variables
+           S : Reel
+        Debut
+           S <-- R * R * 3.14
+           Retourne S
+        Fin
+    Fonction périmètre (  R : Reel) : Reel
+        Variables
+           P : Reel
+        Debut
+           P <-- R * 2 * 1.14
+           Retourne P
+        Fin
+
+Variables
+    N : entier
+Debut
+    Ecrire("Veuillez saisir la valeur de N : ") 
+    Lire(N)
+    Ecrire("Le diamètre du cercle est : " , diametre(R)) 
+    Ecrire("La surface du cercle est : " , surface(R)) 
+    Ecrire("Le périmètre du cercle est : ", perimetre(R))
+Fin
+
+
+
+
+/////////////EXERCICE 39/////////////////////
+Ecrire un algorithme qui affiche la ou les solutions d’une équation du
+second degré de la forme ax*x + b*x +c. Utiliser une fonction pour calculer
+le discriminant Delta et une - procédure pour afficher les solution selon
+delta.
+PS: Pour calculer la racine carrée d'un nombre, nous utilisons la fonction :(sqrt.
+////////////// SOLUTION //////////////////////
+
+Algorithme nombre
+    
+Variables
+
+Debut
+
 Fin
