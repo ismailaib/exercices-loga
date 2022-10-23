@@ -200,13 +200,12 @@ secondes, et qui le convertit en heures, minutes, secondes.
 ////////////////   SOLUTION   ///////////////////////////////////////
 Algorithme Convertitre
 Variables
-    T  : Entier
-    H, M, S  : Réel
+    T , H, M, S , R: Entier
 Debut
     Ecrire ("Ajouter un temps :")
     Lire (T) 
-    H <-- T Div (60*60)
-    R <-- T Mod 60*60
+    H <-- T Div (60 * 60)
+    R <-- T Mod (60 * 60)
     M <--  R Div 60 
     S <-- R Mod 60
 

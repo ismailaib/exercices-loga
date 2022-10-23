@@ -298,7 +298,7 @@ Algorithme nombre
             nbr : entier
         Debut
             nbr <-- 0
-            Repeter 
+            Repeter
                 nbr <-- nbr + 1
                 N <-- N div 10
             Jusqu'a N = 0
@@ -413,7 +413,7 @@ Fin
 
 
 
-/////////////EXERCICE 39/////////////////////
+/////////////EXERCICE 40/////////////////////
 Ecrire un algorithme qui affiche la ou les solutions d’une équation du
 second degré de la forme ax*x + b*x +c. Utiliser une fonction pour calculer
 le discriminant Delta et une - procédure pour afficher les solution selon
@@ -422,9 +422,184 @@ PS: Pour calculer la racine carrée d'un nombre, nous utilisons la fonction :(sq
 ////////////// SOLUTION //////////////////////
 
 Algorithme nombre
-    
+    Fonction discriminant (a ,b ,c : Reel )
+        Variables
+            delta : Reel
+        Debut
+            delta <-- (b^2) - 4*a * c
+            Retourne delta
+        Fin
+    Procedure Solution (a ,b ,c ,delta : Reel )
+        Variables
+            delta : Reel
+            x : Reel
+            x1: Reel
+            x2:Reel
+        Debut
+            SI delta < 0 ALORS
+               Ecrire("pas de solution Reel")
+               SINON SI   delta = 0 
+                  x <-- (-b) / (2*a)
+                  Ecrire("La solution est : ", x)
+               SINON
+                  x1 <-- ( -b - sqrt(delta) ) / ( 2*a)
+                  x2 <-- ( -b + sqrt(delta) ) / ( 2*a)
+                  Ecrire("La solution est : ", x1 , "et" , x2)
+            FINSI
+          FINSI   
+        Fin    
 Variables
+    a, b , c ,delta : Reel
 
 Debut
+ Ecrire("Veuillez saisir les valeurs de a , b et c : ") 
+ Lire(a,b,c)
+ delta <--  descriminant (a, b, c)
+ Solution (a ,b ,c ,delta )
 
+Fin
+
+
+
+/////////////EXERCICE 40/////////////////////
+Ecrire un algorithme qui demande a 'utilisateur de saisir 10 réels stockés
+dans un tableau. Ecrivez ensuite les fonctions et la procédure suivantes:
+
+- Trois fonctions qui permettent de calculer et d’affiche la somme, le
+produit et la moyenne des éléments du tableau.
+
+- Une procédure qui détermine et affiche les éléments positifs et négatifs
+du tableau.
+////////////// SOLUTION //////////////////////
+
+
+Algorithme Fonction
+     Fonction Somme (T: tableau Reel) : Reel
+        Variables
+           S : Reel
+           i : entier
+        Debut
+        S <-- 0
+           POUR i <-- 0 a 9 pas 1 FAIRE
+               S <-- S + T[i]
+           FINPOUR
+        Retourne S
+        Fin
+     Fonction Produit (T: tableau Reel) : Reel
+        Variables
+           P : Reel
+           i : entier           
+        Debut
+        P <-- 1
+           POUR i <-- 0 a 9 pas 1 FAIRE
+               P <-- P + T[i]
+           FINPOUR
+        Retourne P   
+        Fin
+     Fonction Moyenne (T: tableau Reel) : Reel
+        Variables
+           S : Reel
+           M : Reel
+        Debut
+           S <-- Somme (T)
+           M  <-- S / 10
+        Retourne M
+        Fin  
+     Procedure Pn   (T: tableau Reel) : Reel
+        Variables
+           S  ,M: Reel
+           i : entier
+        Debut
+           POUR i <-- 0 a 9 pas 1 FAIRE
+               SI T[i] > 0
+               Ecrire("Les éléments positifs du tableau sont :")
+                 Ecrire(T[i])
+               SINON 
+               Ecrire("Les éléments positifs du tableau sont :")
+                 SI T[i] < 0
+                   N <-- N + 1
+                   Ecrire("Les éléments Negative du tableau sont :")
+                   Ecrire(T[i])
+               SINON 
+                  N <-- N + 0
+                 FINSI
+               FINSI 
+           FIN POURE
+        Fin  
+Variables
+    Tableau [10] : Reel
+    i : entier
+Debut
+    POUR i <-- 0 a 9 pas 1 FAIRE
+       Ecrire("Donner la valeur",i+1,"du tableau :")
+       Lire(T[i])
+    Ecrire("la somme des nombres est :", Somme (T))
+    Ecrire("le produit des nombres est :", Produit (T))
+    Ecrire("la Moyenne des nombres est :", Moyenne (T))
+    FINPOUR
+Fin
+
+
+
+/////////////EXERCICE 40/////////////////////
+Ecrire un algorithme qui demande l'utilisateur de saisir 10 réels stockés dans
+un tableau. Ecrivez ensuite les fonctions suivantes:
+
+- Une fonction qui détermine et affiche le maximum des éléments du tableau.
+
+- Une fonction qui détermine et affiche le minimum des éléments du tableau.
+
+- Une fonction qui renvoie le tableau de méme taille ayant les valeurs dans
+lordre inverse
+////////////// SOLUTION //////////////////////
+
+Algorithme Tableau
+    fonction MIN (Tableau T[10] : Reel) : Reel
+      Variables
+        T[10] : Reel
+        MIN ;i: entier
+    Debut 
+        min <-- T[0]
+        POUR i <-- 0 a 9 PAS 1 FAIRE
+           SI min < T[i]
+            min <-- T[0]
+        FINPOUR
+        Retourne MIN
+    Fin  
+    fonction MAX (Tableau T[10] : Reel) : Reel
+      Variables
+        T[10] : Reel
+        max ;i: entier
+    Debut 
+        max <-- T[0]
+        POUR i <-- 0 a 9 PAS 1 FAIRE
+           SI max > T[i]
+            max <-- T[0]
+        FINPOUR
+        Retourne MAX
+    Fin  
+    fonction INV (Tableau T[10] : Reel) : Reel
+      Variables
+        Tableau TI : Reel
+        i: entier
+    Debut 
+        POUR i <-- 0 a 9 PAS 1 FAIRE
+           TI[9-i] <-- T[i]
+        FINPOUR
+        Retourne INV
+    Fin  
+Variables
+  Tableau T[10] : Reel
+  Tableau TI(10) : réel
+Debut
+      POUR i <-- 0 a 9 pas 1 FAIRE
+       Ecrire("Donner la valeur",i+1,"du tableau :")
+       Lire(T[i])
+      FINPOUR 
+    Ecrire("la Le minimum des éléments du tableau est : ",Minimum(T))
+    Ecrire("Le maximum des éléments du tableau est ",Maximum(T))
+    TI <-- Inverse(T) I
+    Pour 1 <-- 0 à 9 pas 1 faire 
+         Ecrire("L'élément "F " i+ 1 , 11 du tableau inversé est 11 F TI(1)) 
+    fin Pour
 Fin

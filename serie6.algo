@@ -1,0 +1,253 @@
+/////////////EXERCICE 44/////////////////////
+Ecrire un algorithme récursif qui calcule la somme des entiers de 1 an.
+S = 1 4 2 4 + 3 + . +n
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME somme
+    FONCTION somme (n : entier)
+    DEBUT
+       SI n = 0
+         Retourne 0 
+       SINON
+            Retourne  n + somme(n - 1)
+       FINSI
+
+    FIN
+VARIABLE 
+    n : entier
+DEBUT
+    Ecrire("Donner la valeur de S :")
+    Lire(S)
+    Ecrire("La somme des entiers dela",n, "est : ", somme(n ) )
+FIN
+
+
+
+
+/////////////EXERCICE 44/////////////////////
+Ecrire un algorithme récursif qui calcule la puissance X^n d'un entier X par un
+entier n positif.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME puissance
+FONCTION puissance ( X : entier , n : entier ) : entier
+    Debut
+        SI n = 0
+            Retourne 1
+        SINON
+            Retourne X * puissance ( X , n - 1 )
+        FINSI        
+    Fin
+VARIABLE
+    X ,n: entier
+DEBUT
+    Ecrire("Veuillez saisir les valeur de X et n : ")
+    Lire("X , n)
+    Ecrire(puissance( X , n ))
+
+FIN
+
+
+
+
+
+/////////////EXERCICE 44/////////////////////
+Ecrire un algorithme qui permet de déterminer le nombre de combinaisons
+possibles de p éléments parmi n sachant que C? peut étre calculé par :
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME combinaisons
+FONCTION  combinaisons( p : entier , n : entier ) : entier
+    Debut
+         SI p = n
+            retourne 1
+         SINON 
+          SI p = 0
+             retourne n
+         SINON 
+               Retourne combinaisons (p - 1 , n - 1) + combinaisons (p , n - 1)    
+         FINSI
+        FINSI
+    Fin
+VARIABLE
+    p , n : entier
+DEBUT
+    Ecrire("Veuillez saisir les valeur de n : ")
+    Lire(n)
+    Ecrire("Veuillez saisir les valeur de p : ")
+    Lire(p)
+    Ecrire(combinaisons( p , n ))
+FIN
+
+
+
+
+/////////////EXERCICE 45/////////////////////
+Ecrire une fonction récursive qui calcule le  Pgcd de deux nombres entiers
+positifs.
+
+////////////// SOLUTION //////////////////////
+
+algorithme Pgcd
+    FONCTION pgcd ( a: entier , b : entier ) : entier
+    Debut
+       SI b = 0 alors
+          Retourne a
+        SINON 
+          Retourne pgcd ( b , a mod b )  
+        FINSI  
+    Fin
+    VARIABLE
+       a , b : entier
+Debut
+    Ecrire("Donner la valeur de a")
+Lire(a)
+    Ecrire("Donner la valeur de a")
+Lire(b)
+Fin
+
+
+
+
+
+/////////////EXERCICE 45/////////////////////
+Ecrire un algorithme qui contient les deux procédures récursives suivantes :
+Procédure montee qui affiche les entiers de 1 a n, dans l'ordre croissant.
+Procédure descente qui affiche les entiers de 1 a n, dans l'ordre décroissant.
+
+////////////// SOLUTION //////////////////////
+ALGORITHME Procédure
+
+Procédure montee (n : entier) : entier
+     SI n = 0 alors
+        Retourne montee (n)
+     SINON
+        Retourne montee ( n - 1 )
+        Ecrire(n)
+     FINSI   
+Procédure  descente (n : entier) : entier
+SI n = 0 alors
+        Retourne descente (n)
+     SINON
+        Ecrire(n)
+        Retourne descente ( n - 1 )
+     FINSI   
+VARIABLE
+    n : entier
+DEBUT
+    Ecrire("Donner la valeur de n :")
+    Lire(n)
+    Ecrire(montee (n))
+    Ecrire(descente (n))
+FIN
+
+
+
+
+
+
+/////////////EXERCICE 45/////////////////////
+Ecrire un algorithme récursif qui convertit un nombre décimal en binaire.
+////////////// SOLUTION //////////////////////
+ALGORITHME binaire
+Procédure binaire (n : entier) : entier
+    SI n <> 0 ALORS
+       Ecrire(binaire( n mod 2 ))
+        binaire( n div 2 )
+    SINON
+VARIABLE
+   n : entier
+DEBUT
+   Ecrire("Donner la valeur de n :")
+   Lire(n)
+FIN
+
+
+
+
+/////////////EXERCICE 45/////////////////////
+En utilisant la récursivité, écrire un algorithme qui permet d’afficher les
+éléments d'un tableau de taille 5.
+////////////// SOLUTION //////////////////////
+ALGORITHME tableau
+
+Procédure affichage ( T : entier , n : entier) : entier
+   Debut
+    SI n > 0 ALORS 
+    affichage ( T , n - 4)
+    Ecrire( T[n - 1])
+    FINSI
+   Fin
+VARIABLE
+   tableau T[5] : entier
+   i : entier
+DEBUT
+   POUR i <-- 0 a 4 pas FAIRE
+    Ecrire("Donner la valeur de " , i + 1 , " : ")
+    Lire(T[i])
+   FINPOUR 
+   Ecrire(" Les elements du tableau sont : ")
+   affichage ( T , 5)
+FIN
+
+
+
+
+
+/////////////EXERCICE 46/////////////////////
+En utilisant la récursivité, écrire un algorithme qui permet d'afficher la somme
+des éléments d'un tableau de taille 5.
+////////////// SOLUTION //////////////////////
+ALGORITHME tableau
+
+FONCTION somme ( T : entier , n : entier) : entier
+   Debut
+    SI n <= 0 ALORS 
+       Retourne 0
+       SINON
+          Retourne somme (T , n - 1) + T ( n - 1 )
+    FINSI      
+    Fin
+VARIABLE
+   tableau T[5] : entier
+   i : entier
+DEBUT
+   POUR i <-- 0 a 4 pas FAIRE
+    Ecrire("Donner la valeur de " , i + 1 , " : ")
+    Lire(T[i])
+   FINPOUR 
+   Ecrire(" La somme du tableau est : " , somme ( T , 5))
+   
+FIN
+
+
+
+
+/////////////EXERCICE 46/////////////////////
+En utilisant la récursivité, écrire un algorithme qui permet d'afficher la somme
+des éléments d'un tableau de taille 5.
+////////////// SOLUTION //////////////////////
+ALGORITHME tableau
+
+FONCTION somme ( T : entier , n : entier) : entier
+   Debut
+    SI n <= 0 ALORS 
+       Retourne 0
+       SINON
+          Retourne somme (T , n - 1) + T ( n - 1 )
+    FINSI      
+    Fin
+VARIABLE
+   tableau T[5] : entier
+   i : entier
+DEBUT
+   POUR i <-- 0 a 4 pas FAIRE
+    Ecrire("Donner la valeur de " , i + 1 , " : ")
+    Lire(T[i])
+   FINPOUR 
+   Ecrire(" La somme du tableau est : " , somme ( T , 5))
+   
+FIN

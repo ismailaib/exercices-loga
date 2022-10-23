@@ -1,0 +1,354 @@
+/////////////EXERCICE 41/////////////////////
+Ecrire un algorithme qui permet de déclarer un tableau de deux dimensions
+(3,6), puis l'algorithme remplit le tableau avec des valeurs nulles.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME tableau_Null
+    Variables
+        T [3 , 6] : entier
+        i , j : entier
+    Debut
+        POUR i <-- 0 a 2 PAS 1 FAIRE
+             POUR j <-- 0 a 5 PAS FAIRE
+                 T[ i , j ] <-- 0 
+             FIN POUR
+        FIN POUR
+        POUR i <-- 0 a 2 PAS 1 FAIRE
+             POUR j <-- 0 a 5 PAS FAIRE
+                Ecrire( T[ i , j ] )
+             FIN POUR
+        FIN POUR
+    Fin
+
+
+
+
+/////////////EXERCICE 41/////////////////////
+Ecrire un algorithme qui lit une matrice A (tableau a deux dimensions) de
+dimensions 4 et 6 au clavier et affiche les données suivantes :
+
+- La matrice A
+
+- La transposée de A
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME Transposee
+    Variables
+        Tableau T[ 4 , 6 ] , A[ 4 , 6 ]: Reel
+        i , j : entier
+    Debut
+        POUR i <-- 0 a 3 pas 1 FAIRE
+            POUR j <-- 0 a 5 pas 1 FAIRE
+                Lire(A[ i , j ])
+            FIN POUR
+        FIN POUR
+
+        POUR i <-- 0 a 3 pas 1 FAIRE
+            POUR j <-- 0 a 5 pas 1 FAIRE
+                T[ j , i ] <-- A[ j , i ]
+            FIN POUR
+        FIN POUR
+
+        POUR i <-- 0 a 3 pas 1 FAIRE
+            POUR j <-- 0 a 5 pas 1 FAIRE
+                Ecrire (A[ j , i ])
+            FIN POUR
+        FIN POUR
+
+        POUR i <-- 0 a 3 pas 1 FAIRE
+            POUR j <-- 0 a 4 pas 1 FAIRE
+                Ecrire (T[ i , j ])
+            FIN POUR
+        FIN POUR
+    Fin
+
+
+
+/////////////EXERCICE 41/////////////////////
+Ecrire un algorithme qui lit deux matrices A (3,4) et B (4,2) et qui effectue le
+produit des deux matrices.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME effectue
+    Variables
+        Tableau A[ 4 , 5 ] , Tableau B[ 4 , 5 ] , Tableau C[ 4 , 5 ]: Reel
+        i , j : entier
+    Debut
+        POUR i <-- 0 a 3 PAS 1 FAIRE
+            POUR j <-- 0 a 4 PAS FAIRE
+                Lire(A[ i , j ])
+                Lire(B[ i , j ])
+            FIN POUR
+        FIN POUR
+
+        POUR i <-- 0 a 3 PAS 1 FAIRE
+            POUR j <-- 0 a 4 PAS FAIRE
+                C[ i , j ] <-- A[ i , j ] + B[ i , j ]
+            FIN POUR
+        FIN POUR 
+
+        POUR i <-- 0 a 3 PAS 1 FAIRE
+            POUR j <-- 0 a 4 PAS FAIRE
+                Ecrire(C[ i , j ])
+            FIN POUR
+        FIN POUR
+    Fin
+
+
+
+/////////////EXERCICE 41/////////////////////
+Ecrire un algorithme qui lit deux matrices A (3,4) et B (4,2) et qui effectue le
+produit des deux matrices.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME effectue
+    Variables
+         P ,Tableau A[ 3 , 4 ] , Tableau B[ 4 , 2 ] , Tableau C[ 4 , 5 ]: Reel
+        i , j , k: entier
+    Debut
+        POUR i <-- 0 a 2 PAS 1 FAIRE
+            POUR j <-- 0 a 3 PAS FAIRE
+                Lire(A[ i , j ])
+            FIN POUR
+        FIN POUR
+
+        POUR i <-- 0 a 3 PAS 1 FAIRE
+            POUR j <-- 0 a 1 PAS FAIRE
+                Lire(B[ i , j ])
+            FIN POUR
+        FIN POUR
+        
+        POUR i <-- 0 a 2 PAS 1 FAIRE
+            POUR j <-- 0 a 1 PAS 1 FAIRE
+                P <-- 0
+                POUR k <-- 0 a 3 PAS 1 FAIRE
+                    P <-- P + A ( i , k ) * B ( k , j )
+                FIN POUR
+                C ( i , j ) <-- P
+            FIN POUR
+        FIN POUR 
+
+    Fin
+
+
+
+
+/////////////EXERCICE 42/////////////////////
+Ecrire un algorithme qui remplit un tableau de deux dimension et de méme
+taille (5,5), puis l'algorithme calcule la somme de la diagonal principale.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME diagonal
+Variables 
+    Tableau T[ 5 , 5 ] : Reel
+    i , j : entier
+    S : Reel
+Debut    
+    POUR i <-- 0 a 4 pas 1 FAIRE
+        POUR j <-- 0 a 4 pas 1 FAIRE
+            Lire(T[ 5 , 5 ])
+        FINPOUR
+    FINPOUR    
+    S <-- 0
+    POUR i <-- 0 a 4 pas 1 FAIRE
+        POUR j <-- 0 a 4 pas 1 FAIRE
+            SI i = J
+                 S <-- S + T[ i , j ]
+            FINSI
+        FINPOUR
+    FINPOUR  
+    Ecrire(S)
+Fin
+
+
+/////////////EXERCICE 42/////////////////////
+
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME echange
+Variables 
+    Tableau M[ 5 , 5 ] : Reel
+    i , j : entier
+    T : Reel
+Debut    
+    POUR i <-- 0 a 4 pas 1 FAIRE
+        POUR j <-- 0 a 4 pas 1 FAIRE
+            Lire(M[ i , j ])
+        FINPOUR
+    FINPOUR    
+
+    POUR i <-- 0 a 3 pas 1 FAIRE
+        POUR j <-- i + 1 a 4 pas 1 FAIRE
+            T <-- (M[ i , j ])
+            M[ i , j ] <-- M[ j , i ]
+            M[ j , i ] <-- T
+        FINPOUR
+    FINPOUR  
+    POUR i <-- 0 a 4 pas 1 FAIRE
+        POUR j <-- 0 a 4 pas 1 FAIRE
+            Ecrire(M[ i , j ])
+        FINPOUR
+    FINPOUR  
+Fin
+
+
+
+
+/////////////EXERCICE 42/////////////////////
+Ecrire un algorithme qui remplit un tableau de deux dimension (4,6), puis
+l'algorithme détermine :
+
+- Le minimum et le maximum de chaque ligne.
+
+- Le minimum et le maximum de chaque colonne.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME echange
+Variables 
+    Tableau T[ 4 , 6 ] : Reel
+    i , j : entier
+    minl , maxl : Reel
+    minc , maxc : Reel
+Debut    
+    POUR i <-- 0 a 3 pas 1 FAIRE
+        POUR j <-- 0 a 4 pas 1 FAIRE
+            Lire(T[ i , j ])
+        FINPOUR
+    FINPOUR
+
+    
+    POUR i <-- 0 a 3 pas 1 FAIRE
+    minl <-- T[ i , 0 ]
+    maxl <-- T[ i , 0 ]
+        POUR j <-- 0 a 4 pas 1 FAIRE
+            SI minl > T[ i , j ]
+            minl <-- T[ i , j ]
+            FINSI
+            SI maxl < T[ i , j ]
+            maxl <-- T[ i , j ]
+            FINSI
+        FINPOUR
+    FINPOUR
+
+    Ecrire("Le minimum de la ligne" , i + 1 , "est : " , minl)
+    Ecrire("Le maximum de la ligne" , i + 1 , "est : " , minl)
+
+
+    POUR j <-- 0 a 4 pas 1 FAIRE
+    minc <-- T[ 0 , j ]
+    maxc <-- T[ 0 , j ]
+        POUR j <-- 0 a 3 pas 1 FAIRE
+            SI minc > T[ i , j ]
+            minc <-- T[ i , j ]
+            FINSI
+            SI maxc < T[ i , j ]
+            maxc <-- T[ i , j ]
+            FINSI
+        FINPOUR
+    FINPOUR
+
+    Ecrire("Le minimum de colonne" , i + 1 , "est : " , minc)
+    Ecrire("Le maximum de colonne" , i + 1 , "est : " , minc)
+Fin
+
+
+
+
+
+/////////////EXERCICE 42/////////////////////
+Ecrire un algorithme qui demande a l'utilisateur de remplir un tableau de deux
+dimension T (4,6). Ensuite l'algorithme redemande 4 l'utilisateur de saisir un entier
+n. Puis, l’'algorithme cherche I’existence du nombre n dans T et calcule le nombre
+d’occurrence de n dans T.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME echange
+Variables 
+    Tableau T[ 4 , 6 ]: Reel
+    i , j , n: entier
+    S : Reel
+Debut    
+    POUR i <-- 0 a 3 pas 1 FAIRE
+        POUR j <-- 0 a 5 pas 1 FAIRE
+            Lire(T[ i , j ])
+        FINPOUR
+    FINPOUR
+    Ecrire("Donner la valeur de n :")
+    Lire(n)
+    n <-- T[ 0 , 0 ]
+    S <-- 0
+    POUR i <-- 0 a 3 pas 1 FAIRE
+        POUR j <-- 0 a 4 pas 1 FAIRE
+            SI n = T[ i , j ]
+               S <-- S + 1
+               Ecrire( n , "il existe dans se taableau" , S , "fois")
+            FINSI
+        FINPOUR
+    FINPOUR
+Fin
+
+
+
+/////////////EXERCICE 42/////////////////////
+Ecrire un algorithme qui demande a de remplir un tableau de deux dimension T
+de taille (2,2). Ensuite l'algorithme calcule et affiche le déterminant de la
+matrice.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME déterminant
+Variables 
+    Tableau T[ 2 , 2 ]: Reel
+    i , j : entier
+    D : Reel
+Debut
+    POUR i <-- 0 a 1 pas 1 FAIRE
+        POUR j <-- 0 a 1 pas 1 FAIRE
+            Lire(T[ i , j ])
+        FINPOUR
+    FINPOUR
+
+    D <-- T[ 0 , 0 ] * T[ 1 , 1 ] - T[ 1 , 0 ] * T[ 0 , 1 ]
+    Ecrire("Le déterminant de la matrice T est : " , D )
+Fin
+
+
+
+
+/////////////EXERCICE 43/////////////////////
+Ecrire un algorithme qui permet de construire le triangle de PASCAL de degré N
+et le mémorise dans une matrice carrée P de dimension N+1.
+
+////////////// SOLUTION //////////////////////
+
+ALGORITHME PASCAL
+Variables 
+    Tableau T[20 , 20] : entier
+    N : entier
+    i , j : entier
+Debut
+    Ecrire("Donner le nombre N :")
+    Lire(N)
+    POUR i <-- 0 a N pas FAIRE
+        T[ i , 0 ] <-- 1
+        T[ i , i ] <-- 1
+        POUR j <-- 0 a i-1 pas 1 FAIRE
+            T[ i , j ] <-- T[ i-1 , j-1 ] + T[ i-1 , j ]
+        FINPOUR
+    FINPOUR     
+    Ecrire("Triangle de Pascal de degré : ", N , " est :")   
+        POUR i <-- 0 a N pas FAIRE
+        POUR j <-- 0 a i pas 1 FAIRE
+           Lire(T[ i , j ])
+        FINPOUR
+    FINPOUR  
+Fin
+
