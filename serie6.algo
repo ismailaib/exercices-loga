@@ -251,3 +251,17 @@ DEBUT
    Ecrire(" La somme du tableau est : " , somme ( T , 5))
    
 FIN
+
+
+ALGORITHME puissance
+VARIABLE
+    P , Y , X : Reel
+    i : entier
+DEBUT
+    Ecrire("Donner la valeur de X et Y :")
+    Lire(X , Y)
+    P <-- 1
+    POUR i <-- 0 a Y PAS 1 FAIRE
+        P <-- P * X
+    FINPOUR
+FIN

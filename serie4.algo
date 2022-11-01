@@ -603,3 +603,48 @@ Debut
          Ecrire("L'élément "F " i+ 1 , 11 du tableau inversé est 11 F TI(1)) 
     fin Pour
 Fin
+
+
+
+
+ALGORITHME tableau 21
+VARIABLE
+    tableau T[50] : Reel
+    i : entier
+DEBUT
+    POUR i <-- 0 a N Pas 1 FAIRE
+        Ecrire("Donner la valeur" , i + 1 , "du tableau : ")
+        Lire(i)
+    FINPOUR
+    S <-- 0
+    POUR i <-- 0 a N Pas 1 FAIRE
+        S <-- S + i
+    FINPOUR
+FIN
+
+
+
+
+
+ALGORITHME Tableau25
+VARIABLE
+    Tableau A[10] , B[10] , S[10] : Reel
+    i : entier
+DEBUT
+    POUR i <-- 0 a 10 Pas 1 Faire
+        Ecrire("Donner la valeur", i + 1 ,"de tableau : ")
+        Lire(A[i])
+    FINPOUR
+    POUR i <-- 0 a 10 Pas 1 Faire
+        Ecrire("Donner la valeur", i + 1 ,"de tableau : ")
+        Lire(B[i])
+    FINPOUR
+    POUR i <-- 0 a 10 Pas 1 Faire
+        S[i] <-- A[i] + B[i]
+        Ecrire(S[i])
+    FINPOUR
+FIN
+
+
+
+
