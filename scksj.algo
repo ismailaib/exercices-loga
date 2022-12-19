@@ -1,0 +1,48 @@
+ALGORITHME Exercice_15 
+VARIABLE
+    i : entier
+DEBUT   
+    POUR i <-- 0 A 100 PAS 1 FAIRE 
+        Ecrire("je ne dois pas arriver en retard en classe")
+    FINPOUR
+    POUR i <-- 1 a 100+1 PAS 1 FAIRE
+        Ecrire(i)
+    FINPOUR
+    POUR i <-- 0 a 100 PAS 2 FAIRE
+        Ecrire(i)
+    FINPOUR
+FIN
+======================================
+ALGORITHME Exercice_16
+VARIABLE
+    i , n , S = entier
+DEBUT   
+    Ecrire("Donner la valeur de N : ")
+    Lire(N)
+    S = 0
+    POUR i <-- 0 A N + 1 PAS 1 FAIRE 
+        S = S + i
+    FINPOUR
+    POUR i <-- 0 A N + 1 PAS 2 FAIRE 
+        S = S + i
+    FINPOUR
+FIN
+==================================
+ALGORITHME Exercice_18
+VARIABLE
+    i , n , S = entier
+DEBUT
+    Ecrire("Donner la valeur de N : ")
+    Lire(N)
+    P <-- 1
+    POUR i <-- 2 a N / 2 PAS 1 FAIRE
+        SI N % i == 0 ALORS
+            P <-- 0
+        FINSI
+    SI P == 1 ALORS
+        Ecrire("Premier")
+    SINON
+        Ecrire("Non Premier")
+    FINPOUR
+FIN
+==================================

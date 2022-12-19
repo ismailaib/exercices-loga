@@ -265,3 +265,25 @@ DEBUT
         P <-- P * X
     FINPOUR
 FIN
+
+
+
+
+
+
+
+ALGORITHME Equation
+VARIABLE 
+    A , B , C : Reel
+DEBUT
+    Ecrire("Donner la valeur de A : ")
+    Lire(A)
+    Ecrire("Donner la valeur de B : ")
+    Lire(B)
+    SI A != 0 ALORS
+        C <-- B / A
+        Ecrire("La solution de cette equation est :,C")
+    SINON
+        SI A = 0
+        Ecrire("Pas de Solution")
+FIN

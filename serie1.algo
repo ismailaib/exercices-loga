@@ -145,3 +145,21 @@ Debut
    finpour
    Ecrire ("La somme est :", somme)
 Fin
+
+
+
+ALGORITHME POPULATION
+VARIABLE
+   M , A , T : Réel
+   i : Entier
+DEBUT
+   M <-- 1000000
+   A <-- 500000
+   T <-- 0
+   Tant que M > A ALORS :
+      T <-- T + 1
+      M <-- M + 50000
+      A <-- A * (A * 0.8)
+   FinTQ
+   Ecrire(T ,"ans")
+FIN
